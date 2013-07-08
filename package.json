@@ -1,0 +1,36 @@
+{
+  "name":           "installer",
+  "main":           "./lib/index.js",
+  "version":        "0.0.1",
+  "description":    "template vm",
+  "keywords":       ["web", "installer", "wizard"],
+  "author":         "Zongmin Lei <leizongmin@gmail.com>",
+  "contributors": [
+    {"name": "Zongmin Lei", "email": "leizongmin@gmail.com"}
+  ],
+  "repository": {
+    "type":         "git",
+    "url":          "git://github.com/leizongmin/node-web-installer.git"
+  },
+  "licenses":     [{
+    "type":         "MIT",
+    "url":          "https://raw.github.com/leizongmin/node-web-installer/master/MIT-License"
+  }],
+  "bugs":{
+    "url":          "https://github.com/leizongmin/node-web-installer/issues"
+  },
+  "engines": {
+    "node":         ">= 0.6.0"
+  },
+  "dependencies":	{},
+  "devDependencies": {
+    "mocha":        "~1.8.1",
+    "blanket":      "~1.1.5"
+  },
+  "scripts": {
+     "blanket": {
+      "pattern": "node-web-installer/lib"
+    },
+    "test":      "mocha --require blanket -R html-cov > coverage.html -t 5000"
+  }
+}
