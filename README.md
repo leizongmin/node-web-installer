@@ -65,4 +65,7 @@ installer.step(3, '完成', function (step) {
   fs.writeFileSync(__dirname + '/config.js', JSON.stringify(config));
   step.done();
 });
+
+// 启动Web界面
+installer.start(3000);
 ```
