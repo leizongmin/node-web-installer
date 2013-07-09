@@ -4,7 +4,7 @@ var installer = require('../');
 var config = {};
 
 // 使用协议
-installer.welcome('NodeClub安装向导', '按下一步继续');
+installer.welcome('NodeClub安装向导', fs.readFileSync(__dirname + '/license.txt', 'utf8'));
 
 // 第一步
 installer.step(1, '账户配置', function (step) {
@@ -52,8 +52,10 @@ installer.step(2, '网站设置', function (step) {
 // 完成
 installer.step(3, '完成', function (step) {
   // 保存配置文件
-  fs.writeFileSync(__dirname + '/config.js', JSON.stringify(config));
-  step.done();
+  step.submit(function (data) {
+    fs.writeFileSync(__dirname + '/config.js', JSON.stringify(config));
+    step.done();
+  });
 });
 
 // 启动Web界面

@@ -2,11 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Node Web Application Installer</title>
-  <link rel="stylesheet" type="text/css" href="/public/global.css">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/public/pure-min.css">
+  <link rel="stylesheet" href="/public/global.css">
 </head>
 <body>
-  
-  <%- body %>
+  <form action="/step" method="post" enctype="multipart/form-data">
+    <div class="title"><%= title %></div>
+    <div class="main">
+      <%- body %>
+    </div>
+    <div class="footer">
+      <button type="submit" name="$prev" class="pure-button pure-button-small">上一步</button>
+      <button type="submit" name="$next" class="pure-button pure-button-active pure-button-small pure-button-secondary">下一步</button>
+    </div>
+  </form>
 </body>
 </html>
