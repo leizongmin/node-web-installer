@@ -1,0 +1,9 @@
+<div class="form">
+  <% if (locals.$error) { %>
+  <div class="error">
+    参数：<%= $error.field %>
+    <pre><%= $error.error %></pre>
+  </div>
+  <% } %>
+  <%- form %>
+</div>

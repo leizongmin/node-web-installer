@@ -60,3 +60,24 @@ pre {
 .main {
   padding: 12px 20px;
 }
+
+input {
+  width: 30em;
+}
+
+.form {
+  min-height: 200px;
+}
+
+.form .error {
+  border: 1px solid rgb(189, 5, 5);
+  padding: 4px 10px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 1px rgb(189,5,5);
+  color: rgb(189,5,5);
+  font-size: 90%;
+}
+.error pre {
+  font-size: 90%;
+  margin: 0;
+}
