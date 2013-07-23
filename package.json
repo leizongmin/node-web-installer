@@ -24,7 +24,6 @@
   },
   "dependencies":	{
     "debug":        "~0.7",
-    "urlrouter":    "~0.4",
     "connect":      "~2.8",
     "ejs":          "~0.8"
   },
