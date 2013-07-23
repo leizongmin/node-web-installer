@@ -14,8 +14,12 @@
       <%- body %>
     </div>
     <div class="footer">
+    <% if (!locals.$done) { %>
       <button type="submit" name="$prev" class="pure-button pure-button-small">上一步</button>
       <button type="submit" name="$next" class="pure-button pure-button-active pure-button-small pure-button-secondary">下一步</button>
+    <% } else { %>
+      <button type="button" onclick="window.close()" class="pure-button pure-button-active pure-button-small pure-button-secondary">完成</button>
+    <% } %>
     </div>
   </form>
 </body>
