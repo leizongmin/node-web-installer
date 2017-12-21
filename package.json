@@ -23,13 +23,13 @@
     "node":         ">= 0.6.0"
   },
   "dependencies":	{
-    "debug":        "~0.7",
-    "connect":      "~2.8",
-    "ejs":          "~0.8"
+    "debug":        "~3.1.0",
+    "connect":      "~3.6.5",
+    "ejs":          "~2.5.7"
   },
   "devDependencies": {
-    "mocha":        "~1.8.1",
-    "blanket":      "~1.1.5"
+    "mocha":        "~4.0.1",
+    "blanket":      "~1.2.3"
   },
   "scripts": {
      "blanket": {
